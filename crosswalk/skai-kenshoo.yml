@@ -1,0 +1,69 @@
+provider: skai-kenshoo
+apis_io: https://apis.io/providers/skai-kenshoo/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name:
+      - name
+      - campaign_name
+      id: id
+      account_id: account_id
+      status: status
+      budget: budget
+      end_date: end_date
+      start_date: start_date
+    core_coverage: 0.7
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v1/campaigns
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v2/campaigns
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/campaigns
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v2/campaigns
+    - openapi/_original/skai-kenshoo-api-openapi.yml#PUT /api/v1/campaigns
+  ad_group:
+    path_segment:
+    - ad_groups
+    properties:
+      id: id
+      name: name
+      campaign_id: campaign_id
+      status: status
+      targeting: targeting
+      end_date: end_date
+      start_date: start_date
+      bid: bid
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v1/ad_groups
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v2/ad_groups
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/ad_groups
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v2/ad_groups
+    - openapi/_original/skai-kenshoo-api-openapi.yml#PUT /api/v1/ad_groups
+  ad:
+    path_segment:
+    - ads
+    properties:
+      id: id
+      name: name
+      creative_id: creative
+      ad_group_id: ad_group_id
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#GET /api/v2/ads
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/ads
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v2/ads
+    - openapi/_original/skai-kenshoo-api-openapi.yml#PUT /api/v2/ads
+    - openapi/_original/skai-kenshoo-openapi-original.yml#GET /api/v2/ads
+  ad_report:
+    path_segment:
+    - reports
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/reports
+    - openapi/_original/skai-kenshoo-openapi-original.yml#POST /api/v1/reports

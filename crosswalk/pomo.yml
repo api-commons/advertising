@@ -1,0 +1,85 @@
+provider: pomo
+apis_io: https://apis.io/providers/pomo/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaigns
+    - campaign
+    properties:
+      name:
+      - name
+      - campaign_name
+      id: id
+      account_id:
+      - account_id
+      - profile_id
+      status: status
+      budget: daily_budget
+      campaign_id: campaign_id
+      created_at: created_at
+      end_date: end_date
+      start_date: start_date
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pomo-openapi.json#DELETE /api/campaigns/online-ads/google-video/campaign/{campaign_id}
+    - openapi/_original/pomo-openapi.json#DELETE /api/campaigns/online-ads/tiktok-video/campaign/{campaign_id}
+    - openapi/_original/pomo-openapi.json#DELETE /api/experiment-packages/{package_id}/campaigns/{campaign_id}
+    - openapi/_original/pomo-openapi.json#DELETE /api/social-posts/campaigns/{campaign_id}
+    - openapi/_original/pomo-openapi.json#GET /api/campaign-analytics/campaigns/{campaign_id}
+  ad_group:
+    path_segment:
+    - ad-groups
+    properties:
+      name: name
+      campaign_id: campaign_id
+      account_id:
+      - account_id
+      - profile_id
+      bid: default_bid
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pomo-openapi.json#POST /api/external-platform/amazon/ad-groups
+    - openapi/_original/pomo-openapi.json#POST /api/external-platform/google/ad-groups
+    - openapi/_original/pomo-openapi.yml#POST /api/external-platform/amazon/ad-groups
+    - openapi/_original/pomo-openapi.yml#POST /api/external-platform/google/ad-groups
+  ad:
+    path_segment:
+    - ads
+    - ad
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pomo-openapi.json#GET /api/ai-testing/ads
+    - openapi/_original/pomo-openapi.json#GET /api/ai-testing/test/ad/{ad_id}
+    - openapi/_original/pomo-openapi.json#GET /api/competitor-tracking/{competitor_id}/ads
+    - openapi/_original/pomo-openapi.json#GET /api/product-offerings/{offering_id}/ads
+    - openapi/_original/pomo-openapi.yml#GET /api/ai-testing/ads
+  ad_audience:
+    path_segment:
+    - audiences
+    properties:
+      name: name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pomo-openapi.json#GET /api/crm/audiences
+    - openapi/_original/pomo-openapi.yml#GET /api/crm/audiences
+  ad_report:
+    path_segment:
+    - insights
+    - performance
+    - reports
+    - report
+    properties:
+      id: id
+      campaign_id: campaign_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pomo-openapi.json#GET /api/agentic/teams/{team_id}/mmm/reports
+    - openapi/_original/pomo-openapi.json#GET /api/agentic/teams/{team_id}/search-readiness/reports
+    - openapi/_original/pomo-openapi.json#GET /api/campaigns/dayparting/performance/{campaign_id}
+    - openapi/_original/pomo-openapi.json#GET /api/competitor-tracking/{competitor_id}/insights
+    - openapi/_original/pomo-openapi.json#GET /api/email-campaigns/v2/{campaign_id}/insights

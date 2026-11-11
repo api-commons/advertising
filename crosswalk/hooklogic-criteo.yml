@@ -1,0 +1,51 @@
+provider: hooklogic-criteo
+apis_io: https://apis.io/providers/hooklogic-criteo/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - accounts
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      objective: type
+    core_coverage: 0.1
+    evidence:
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/campaigns
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/balances/{balance-id}/campaigns
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/campaigns/{campaignId}
+    - openapi/_original/hooklogic-criteo-openapi.json#POST /2026-07/retail-media/accounts/{account-id}/campaigns
+    - openapi/_original/hooklogic-criteo-openapi.json#POST /2026-07/retail-media/reports/sync/campaigns
+  ad_group:
+    path_segment:
+    - line-items
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/line-items
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/line-items/{line-item-id}
+    - openapi/_original/hooklogic-criteo-openapi.json#POST /2026-07/retail-media/reports/sync/line-items
+  creative:
+    path_segment:
+    - creatives
+    properties:
+      id: id
+      name: name
+      type: type
+      brand_id: brandId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/creatives
+    - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/creatives/{creative-id}
+    - openapi/_original/hooklogic-criteo-openapi.json#POST /2026-07/retail-media/accounts/{account-id}/creatives
+    - openapi/_original/hooklogic-criteo-openapi.json#PUT /2026-07/retail-media/accounts/{account-id}/creatives/{creative-id}

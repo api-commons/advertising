@@ -1,0 +1,92 @@
+provider: madhive
+apis_io: https://apis.io/providers/madhive/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties:
+      name: name
+      id: id
+      created_at: created
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/madhive-api-openapi-original.yml#DELETE /v1/advertisers/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/advertisers
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/advertisers/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#POST /v1/advertisers
+    - openapi/_original/madhive-api-openapi-original.yml#PUT /v1/advertisers/{id}
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name: name
+      id: id
+      account_id: advertiserId
+      end_date: endDate
+      start_date: startDate
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/madhive-api-openapi-original.yml#DELETE /v1/campaigns/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/campaigns
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/campaigns/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#POST /v1/campaigns
+    - openapi/_original/madhive-api-openapi-original.yml#POST /v1/retargeting/campaigns
+  ad_group:
+    path_segment:
+    - lineitems
+    properties:
+      id: id
+      name: name
+      campaign_id: campaignId
+      account_id: advertiserId
+      status: status
+      targeting:
+      - audiences
+      - targeting
+      end_date: endDate
+      start_date: startDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/madhive-api-openapi-original.yml#DELETE /v1/lineitems/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/campaigns/{id}/lineitems
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/lineitems/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#POST /v1/creatives/{cId}/lineitems/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#POST /v1/lineitems
+  creative:
+    path_segment:
+    - creatives
+    properties:
+      id:
+      - creativeId
+      - id
+      - adId
+      name: name
+      type:
+      - type
+      - creativeType
+      account_id: advertiserId
+      url: previewUrl
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/madhive-api-openapi-original.yml#DELETE /v1/creatives/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/campaigns/{id}/creatives
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/creatives
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/creatives/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#PATCH /v1/creatives/{id}
+  ad_audience:
+    path_segment:
+    - audiences
+    properties:
+      name: name
+      id: id
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/madhive-api-openapi-original.yml#DELETE /v1/audiences/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/audiences
+    - openapi/_original/madhive-api-openapi-original.yml#GET /v1/audiences/{id}
+    - openapi/_original/madhive-api-openapi-original.yml#POST /v1/audiences
+    - openapi/_original/madhive-api-openapi-original.yml#PUT /v1/audiences/{id}

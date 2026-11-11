@@ -1,0 +1,21 @@
+provider: partnerize
+apis_io: https://apis.io/providers/partnerize/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties:
+      name:
+      - title
+      - name
+      - display_name
+      id: id
+      status: status
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/partnerize-partners-api-openapi.yml#GET /v2/publishers/{publisherId}/discovery/advertisers
+    - openapi/_original/partnerize-partners-api-openapi.yml#GET /v2/publishers/{publisherId}/discovery/advertisers/{advertiserId}
+    - openapi/_original/partnerize-partners-api-openapi.yml#GET /v2/publishers/{publisher_id}/invitations/advertisers/

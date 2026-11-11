@@ -1,0 +1,45 @@
+provider: channel99
+apis_io: https://apis.io/providers/channel99/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - ad-accounts
+    properties:
+      account_id: ad_account_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/channel99-pulsar-openapi.json#GET /dimensions/ad-accounts
+  ad_campaign:
+    path_segment:
+    - ad-campaigns
+    properties:
+      id: ad_campaign_id
+    core_coverage: 0.1
+    evidence:
+    - openapi/_original/channel99-pulsar-openapi.json#GET /dimensions/ad-campaigns
+  ad_group:
+    path_segment:
+    - ad-groups
+    properties:
+      id: ad_group_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/channel99-pulsar-openapi.json#GET /dimensions/ad-groups
+  ad:
+    path_segment:
+    - ads
+    properties:
+      id: ad_id
+      name: ad_name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/channel99-pulsar-openapi.json#GET /dimensions/ads
+  ad_audience:
+    path_segment:
+    - audiences
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/channel99-pulsar-openapi.json#GET /dimensions/audiences

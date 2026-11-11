@@ -1,0 +1,16 @@
+provider: the-trade-desk
+apis_io: https://apis.io/providers/the-trade-desk/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertiser
+    properties:
+      account_id: AdvertiserId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/ttd-data-api-raw.json#POST /data/advertiser
+    - openapi/_original/ttd-data-api-raw.json#POST /data/deletion-optout/advertiser
+    - openapi/_original/ttd-data-api.yaml#POST /data/advertiser
+    - openapi/_original/ttd-data-api.yaml#POST /data/deletion-optout/advertiser

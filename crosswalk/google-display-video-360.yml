@@ -1,0 +1,75 @@
+provider: google-display-video-360
+apis_io: https://apis.io/providers/google-display-video-360/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties:
+      name:
+      - displayName
+      - name
+      account_id: advertiserId
+      updated_at: updateTime
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/google-display-video-360-api-openapi.yml#DELETE /v4/advertisers/{advertisersId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#PATCH /v4/advertisers/{advertisersId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#POST /v4/advertisers
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name:
+      - name
+      - displayName
+      account_id: advertiserId
+      campaign_id: campaignId
+      updated_at: updateTime
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/google-display-video-360-api-openapi.yml#DELETE /v4/advertisers/{advertisersId}/campaigns/{campaignsId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/campaigns
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/campaigns/{campaignsId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#PATCH /v4/advertisers/{advertisersId}/campaigns/{campaignsId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#POST /v4/advertisers/{advertisersId}/campaigns
+  ad_group:
+    path_segment:
+    - lineitems
+    - adgroups
+    properties:
+      id: adGroupId
+      name:
+      - displayName
+      - name
+      campaign_id: campaignId
+      account_id: advertiserId
+      updated_at: updateTime
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/google-display-video-360-api-openapi.yml#DELETE /v4/advertisers/{advertisersId}/adGroups/{adGroupsId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#DELETE /v4/advertisers/{advertisersId}/lineItems/{lineItemsId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/adGroups
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/adGroups/{adGroupsId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/lineItems
+  creative:
+    path_segment:
+    - creatives
+    properties:
+      id: creativeId
+      name:
+      - displayName
+      - name
+      type: creativeType
+      account_id: advertiserId
+      updated_at: updateTime
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/google-display-video-360-api-openapi.yml#DELETE /v4/advertisers/{advertisersId}/creatives/{creativesId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/creatives
+    - openapi/_original/google-display-video-360-api-openapi.yml#GET /v4/advertisers/{advertisersId}/creatives/{creativesId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#PATCH /v4/advertisers/{advertisersId}/creatives/{creativesId}
+    - openapi/_original/google-display-video-360-api-openapi.yml#POST /v4/advertisers/{advertisersId}/creatives

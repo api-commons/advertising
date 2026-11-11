@@ -1,0 +1,227 @@
+context: advertising
+generated: '2026-11-10'
+adopters:
+- provider: adready-cpxi
+  apis_io: https://apis.io/providers/adready-cpxi/
+  crosswalk: crosswalk/adready-cpxi.yml
+  concepts:
+  - ad_account
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - ad_report
+  - creative
+- provider: affise
+  apis_io: https://apis.io/providers/affise/
+  crosswalk: crosswalk/affise.yml
+  concepts:
+  - ad_account
+- provider: amazon
+  apis_io: https://apis.io/providers/amazon/
+  crosswalk: crosswalk/amazon.yml
+  concepts:
+  - ad_campaign
+  - ad_group
+  - ad_report
+- provider: avito
+  apis_io: https://apis.io/providers/avito/
+  crosswalk: crosswalk/avito.yml
+  concepts:
+  - ad_account
+- provider: awin-affiliate
+  apis_io: https://apis.io/providers/awin-affiliate/
+  crosswalk: crosswalk/awin-affiliate.yml
+  concepts:
+  - ad_account
+- provider: basis
+  apis_io: https://apis.io/providers/basis/
+  crosswalk: crosswalk/basis.yml
+  concepts:
+  - ad_campaign
+  - ad_group
+  - creative
+- provider: cardlytics
+  apis_io: https://apis.io/providers/cardlytics/
+  crosswalk: crosswalk/cardlytics.yml
+  concepts:
+  - ad
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - ad_report
+- provider: channel99
+  apis_io: https://apis.io/providers/channel99/
+  crosswalk: crosswalk/channel99.yml
+  concepts:
+  - ad
+  - ad_account
+  - ad_audience
+  - ad_campaign
+  - ad_group
+- provider: criteo
+  apis_io: https://apis.io/providers/criteo/
+  crosswalk: crosswalk/criteo.yml
+  concepts:
+  - ad
+  - ad_account
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - ad_report
+  - creative
+- provider: facebook-business-manager
+  apis_io: https://apis.io/providers/facebook-business-manager/
+  crosswalk: crosswalk/facebook-business-manager.yml
+  concepts:
+  - ad
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - ad_report
+  - creative
+- provider: freewheel-media
+  apis_io: https://apis.io/providers/freewheel-media/
+  crosswalk: crosswalk/freewheel-media.yml
+  concepts:
+  - ad_account
+- provider: google-display-video-360
+  apis_io: https://apis.io/providers/google-display-video-360/
+  crosswalk: crosswalk/google-display-video-360.yml
+  concepts:
+  - ad_account
+  - ad_campaign
+  - ad_group
+  - creative
+- provider: groundtruth
+  apis_io: https://apis.io/providers/groundtruth/
+  crosswalk: crosswalk/groundtruth.yml
+  concepts:
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - creative
+- provider: hooklogic-criteo
+  apis_io: https://apis.io/providers/hooklogic-criteo/
+  crosswalk: crosswalk/hooklogic-criteo.yml
+  concepts:
+  - ad_account
+  - ad_campaign
+  - ad_group
+  - creative
+- provider: impact
+  apis_io: https://apis.io/providers/impact/
+  crosswalk: crosswalk/impact.yml
+  concepts:
+  - ad_account
+- provider: kevel
+  apis_io: https://apis.io/providers/kevel/
+  crosswalk: crosswalk/kevel.yml
+  concepts:
+  - ad_account
+- provider: later
+  apis_io: https://apis.io/providers/later/
+  crosswalk: crosswalk/later.yml
+  concepts:
+  - ad_account
+- provider: linkedin-ads
+  apis_io: https://apis.io/providers/linkedin-ads/
+  crosswalk: crosswalk/linkedin-ads.yml
+  concepts:
+  - ad_account
+- provider: madhive
+  apis_io: https://apis.io/providers/madhive/
+  crosswalk: crosswalk/madhive.yml
+  concepts:
+  - ad_account
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - creative
+- provider: magnite
+  apis_io: https://apis.io/providers/magnite/
+  crosswalk: crosswalk/magnite.yml
+  concepts:
+  - ad_account
+- provider: mediamath
+  apis_io: https://apis.io/providers/mediamath/
+  crosswalk: crosswalk/mediamath.yml
+  concepts:
+  - ad_account
+- provider: mntn
+  apis_io: https://apis.io/providers/mntn/
+  crosswalk: crosswalk/mntn.yml
+  concepts:
+  - ad_account
+- provider: moloco
+  apis_io: https://apis.io/providers/moloco/
+  crosswalk: crosswalk/moloco.yml
+  concepts:
+  - ad_account
+  - ad_campaign
+  - ad_group
+  - ad_report
+  - creative
+- provider: partnerize
+  apis_io: https://apis.io/providers/partnerize/
+  crosswalk: crosswalk/partnerize.yml
+  concepts:
+  - ad_account
+- provider: pomo
+  apis_io: https://apis.io/providers/pomo/
+  crosswalk: crosswalk/pomo.yml
+  concepts:
+  - ad
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - ad_report
+- provider: rtbhouse
+  apis_io: https://apis.io/providers/rtbhouse/
+  crosswalk: crosswalk/rtbhouse.yml
+  concepts:
+  - ad_account
+- provider: scope3
+  apis_io: https://apis.io/providers/scope3/
+  crosswalk: crosswalk/scope3.yml
+  concepts:
+  - ad_account
+- provider: skai-kenshoo
+  apis_io: https://apis.io/providers/skai-kenshoo/
+  crosswalk: crosswalk/skai-kenshoo.yml
+  concepts:
+  - ad
+  - ad_campaign
+  - ad_group
+  - ad_report
+- provider: smartnews
+  apis_io: https://apis.io/providers/smartnews/
+  crosswalk: crosswalk/smartnews.yml
+  concepts:
+  - ad
+  - ad_account
+  - ad_audience
+  - ad_campaign
+  - ad_group
+  - ad_report
+- provider: streetmetrics
+  apis_io: https://apis.io/providers/streetmetrics/
+  crosswalk: crosswalk/streetmetrics.yml
+  concepts:
+  - ad_campaign
+  - ad_group
+  - creative
+- provider: taboola
+  apis_io: https://apis.io/providers/taboola/
+  crosswalk: crosswalk/taboola.yml
+  concepts:
+  - ad_account
+- provider: the-trade-desk
+  apis_io: https://apis.io/providers/the-trade-desk/
+  crosswalk: crosswalk/the-trade-desk.yml
+  concepts:
+  - ad_account
+- provider: trade-desk
+  apis_io: https://apis.io/providers/trade-desk/
+  crosswalk: crosswalk/trade-desk.yml
+  concepts:
+  - ad_account

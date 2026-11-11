@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_report.json",
+  "title": "Ad Report",
+  "description": "The common ad_report in Advertising, distilled from 8 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "id",
+        "ad_id"
+      ]
+    },
+    "campaign_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "campaign_id"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "date_start",
+        "reportDate",
+        "date"
+      ]
+    },
+    "metrics": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "metrics"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "status"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "advertising",
+    "concept": "ad_report",
+    "providers": 8,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

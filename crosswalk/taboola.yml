@@ -1,0 +1,12 @@
+provider: taboola
+apis_io: https://apis.io/providers/taboola/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/taboola-backstage-accounts-api-openapi.yml#GET /{network_id}/advertisers

@@ -1,0 +1,104 @@
+provider: facebook-business-manager
+apis_io: https://apis.io/providers/facebook-business-manager/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name: name
+      id: id
+      status:
+      - status
+      - effective_status
+      budget:
+      - daily_budget
+      - lifetime_budget
+      created_at: created_time
+      end_date: stop_time
+      start_date: start_time
+      updated_at: updated_time
+      objective: objective
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/facebook-marketing-openapi.yml#GET /act_{ad_account_id}/campaigns
+    - openapi/_original/facebook-marketing-openapi.yml#POST /act_{ad_account_id}/campaigns
+  ad_group:
+    path_segment:
+    - adsets
+    properties:
+      id: id
+      name: name
+      campaign_id: campaign_id
+      status:
+      - status
+      - effective_status
+      targeting: targeting
+      updated_at: updated_time
+      created_at: created_time
+      end_date: end_time
+      start_date: start_time
+      bid: bid_amount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/facebook-marketing-openapi.yml#GET /act_{ad_account_id}/adsets
+    - openapi/_original/facebook-marketing-openapi.yml#POST /act_{ad_account_id}/adsets
+  ad:
+    path_segment:
+    - ads
+    properties:
+      id: id
+      name: name
+      creative_id: creative
+      ad_group_id: adset_id
+      status:
+      - status
+      - effective_status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/facebook-marketing-openapi.yml#GET /act_{ad_account_id}/ads
+    - openapi/_original/facebook-marketing-openapi.yml#POST /act_{ad_account_id}/ads
+  creative:
+    path_segment:
+    - adcreatives
+    properties:
+      id: id
+      name:
+      - name
+      - title
+      url: image_url
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/facebook-marketing-openapi.yml#GET /act_{ad_account_id}/adcreatives
+    - openapi/_original/facebook-marketing-openapi.yml#POST /act_{ad_account_id}/adcreatives
+  ad_audience:
+    path_segment:
+    - customaudiences
+    properties:
+      name: name
+      id: id
+      source:
+      - subtype
+      - data_source
+      status:
+      - delivery_status
+      - operation_status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/facebook-marketing-openapi.yml#GET /act_{ad_account_id}/customaudiences
+    - openapi/_original/facebook-marketing-openapi.yml#POST /act_{ad_account_id}/customaudiences
+  ad_report:
+    path_segment:
+    - insights
+    properties:
+      id:
+      - ad_id
+      - id
+      campaign_id: campaign_id
+      date: date_start
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/facebook-marketing-openapi.yml#GET /act_{ad_account_id}/insights
+    - openapi/_original/facebook-marketing-openapi.yml#GET /{campaign_id}/insights
+    - openapi/_original/facebook-pages-openapi.yml#GET /{page_id}/insights

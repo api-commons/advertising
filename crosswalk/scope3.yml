@@ -1,0 +1,21 @@
+provider: scope3
+apis_io: https://apis.io/providers/scope3/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      status: status
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/scope3-buyer-openapi-original.yml#DELETE /advertisers/{advertiserId}
+    - openapi/_original/scope3-buyer-openapi-original.yml#GET /advertisers
+    - openapi/_original/scope3-buyer-openapi-original.yml#GET /advertisers/{advertiserId}
+    - openapi/_original/scope3-buyer-openapi-original.yml#POST /advertisers
+    - openapi/_original/scope3-buyer-openapi-original.yml#PUT /advertisers/{advertiserId}

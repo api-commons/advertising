@@ -1,0 +1,16 @@
+provider: freewheel-media
+apis_io: https://apis.io/providers/freewheel-media/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertiser
+    properties:
+      account_id: advertiser_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/freewheel-media-advertiser-buzz-openapi-original.json#DELETE /advertiser
+    - openapi/_original/freewheel-media-advertiser-buzz-openapi-original.json#GET /advertiser
+    - openapi/_original/freewheel-media-advertiser-buzz-openapi-original.json#POST /advertiser
+    - openapi/_original/freewheel-media-advertiser-buzz-openapi-original.json#PUT /advertiser

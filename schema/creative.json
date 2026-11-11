@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/advertising/main/schema/creative.json",
+  "title": "Creative",
+  "description": "The common creative in Advertising, distilled from 9 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 1.0,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "creativeId",
+        "adgroup_id",
+        "creative_id",
+        "adId"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 1.0,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "displayName",
+        "campaign_name",
+        "adgroup_name",
+        "display_name"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "type",
+        "creativeType",
+        "media_type",
+        "creative_type"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "advertiserId",
+        "account_id",
+        "ad_account_id"
+      ]
+    },
+    "brand_id": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "brandId",
+        "brand_id"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "updateTime",
+        "updated_date",
+        "updated_at"
+      ],
+      "format": "date-time"
+    },
+    "url": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "image_url",
+        "thumbnail_url",
+        "video_url",
+        "previewUrl"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "advertising",
+    "concept": "creative",
+    "providers": 9,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

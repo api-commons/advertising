@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_group.json",
+  "title": "Ad Group",
+  "description": "The common ad_group in Advertising, distilled from 16 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.875,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "id",
+        "adGroupId",
+        "ad_group_id",
+        "adgroup_id"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.75,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "name",
+        "displayName",
+        "adgroup_name",
+        "campaign_name",
+        "display_name",
+        "title"
+      ]
+    },
+    "campaign_id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.688,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "campaign_id",
+        "campaignId"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.438,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "advertiserId",
+        "account_id",
+        "accountId",
+        "ad_account_id",
+        "profile_id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.438,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "effective_status",
+        "configured_status",
+        "delivery_status"
+      ]
+    },
+    "targeting": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.438,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "targeting",
+        "audiences",
+        "audience",
+        "targetings"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.438,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "updated_time",
+        "updateTime",
+        "updated_date"
+      ],
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created_time",
+        "created_date"
+      ],
+      "format": "date-time"
+    },
+    "end_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.312,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "end_date",
+        "end_time",
+        "endDate"
+      ]
+    },
+    "start_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.312,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "start_date",
+        "start_time",
+        "startDate"
+      ]
+    },
+    "bid": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "defaultBid",
+        "bid_amount",
+        "default_bid",
+        "bid"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "advertising",
+    "concept": "ad_group",
+    "providers": 16,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

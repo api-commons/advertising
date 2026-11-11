@@ -1,0 +1,15 @@
+provider: magnite
+apis_io: https://apis.io/providers/magnite/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magnite-springserve-v0-openapi-original.yaml#POST /api/v0/operative/advertisers
+    - openapi/_original/magnite-springserve-v0-openapi.yml#POST /api/v0/operative/advertisers
+    - openapi/_original/rubicon-project-springserve-v0-openapi.yml#POST /api/v0/operative/advertisers
+    - openapi/_original/rubicon-project-springserve-v0-openapi_2.yml#POST /api/v0/operative/advertisers

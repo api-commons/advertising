@@ -1,0 +1,632 @@
+openapi: 3.1.0
+info:
+  title: Advertising (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Advertising interface, distilled from the harvested OpenAPI of 134 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /ad-accounts:
+    get:
+      operationId: listAdAccounts
+      summary: List ad accounts
+      tags:
+      - Ad Accounts
+      x-commons-tier: core
+      x-commons-share: 0.8
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/AdAccount'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAdAccount
+      summary: Create an ad account
+      tags:
+      - Ad Accounts
+      x-commons-tier: core
+      x-commons-share: 0.56
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /ad-accounts/{ad_account_id}:
+    parameters:
+    - $ref: '#/components/parameters/ad_account_id'
+    get:
+      operationId: getAdAccount
+      summary: Get an ad account
+      tags:
+      - Ad Accounts
+      x-commons-tier: core
+      x-commons-share: 0.56
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateAdAccount
+      summary: Update an ad account
+      tags:
+      - Ad Accounts
+      x-commons-tier: extended
+      x-commons-share: 0.24
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /ad-campaigns:
+    get:
+      operationId: listAdCampaigns
+      summary: List ad campaigns
+      tags:
+      - Ad Campaigns
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/AdCampaign'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAdCampaign
+      summary: Create an ad campaign
+      tags:
+      - Ad Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.875
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /ad-campaigns/{ad_campaign_id}:
+    parameters:
+    - $ref: '#/components/parameters/ad_campaign_id'
+    get:
+      operationId: getAdCampaign
+      summary: Get an ad campaign
+      tags:
+      - Ad Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.812
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateAdCampaign
+      summary: Update an ad campaign
+      tags:
+      - Ad Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.688
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+    delete:
+      operationId: deleteAdCampaign
+      summary: Delete an ad campaign
+      tags:
+      - Ad Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.625
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /ad-groups:
+    get:
+      operationId: listAdGroups
+      summary: List ad groups
+      tags:
+      - Ad Groups
+      x-commons-tier: core
+      x-commons-share: 0.938
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/AdGroup'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAdGroup
+      summary: Create an ad group
+      tags:
+      - Ad Groups
+      x-commons-tier: core
+      x-commons-share: 0.812
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /ad-groups/{ad_group_id}:
+    parameters:
+    - $ref: '#/components/parameters/ad_group_id'
+    get:
+      operationId: getAdGroup
+      summary: Get an ad group
+      tags:
+      - Ad Groups
+      x-commons-tier: core
+      x-commons-share: 0.625
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    delete:
+      operationId: deleteAdGroup
+      summary: Delete an ad group
+      tags:
+      - Ad Groups
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateAdGroup
+      summary: Update an ad group
+      tags:
+      - Ad Groups
+      x-commons-tier: extended
+      x-commons-share: 0.438
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /ads:
+    get:
+      operationId: listAds
+      summary: List ads
+      tags:
+      - Ads
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Ad'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAd
+      summary: Create an ad
+      tags:
+      - Ads
+      x-commons-tier: core
+      x-commons-share: 0.714
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /ads/{ad_id}:
+    parameters:
+    - $ref: '#/components/parameters/ad_id'
+    get:
+      operationId: getAd
+      summary: Get an ad
+      tags:
+      - Ads
+      x-commons-tier: core
+      x-commons-share: 0.571
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    delete:
+      operationId: deleteAd
+      summary: Delete an ad
+      tags:
+      - Ads
+      x-commons-tier: extended
+      x-commons-share: 0.429
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /creatives:
+    get:
+      operationId: listCreatives
+      summary: List creatives
+      tags:
+      - Creatives
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Creative'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCreative
+      summary: Create a creative
+      tags:
+      - Creatives
+      x-commons-tier: core
+      x-commons-share: 0.9
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /creatives/{creative_id}:
+    parameters:
+    - $ref: '#/components/parameters/creative_id'
+    get:
+      operationId: getCreative
+      summary: Get a creative
+      tags:
+      - Creatives
+      x-commons-tier: core
+      x-commons-share: 0.8
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateCreative
+      summary: Update a creative
+      tags:
+      - Creatives
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+    delete:
+      operationId: deleteCreative
+      summary: Delete a creative
+      tags:
+      - Creatives
+      x-commons-tier: extended
+      x-commons-share: 0.4
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+  /ad-audiences:
+    get:
+      operationId: listAdAudiences
+      summary: List ad audiences
+      tags:
+      - Ad Audiences
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id006
+                  $ref: '#/components/schemas/AdAudience'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAdAudience
+      summary: Create an ad audience
+      tags:
+      - Ad Audiences
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /ad-audiences/{ad_audience_id}:
+    parameters:
+    - $ref: '#/components/parameters/ad_audience_id'
+    get:
+      operationId: getAdAudience
+      summary: Get an ad audience
+      tags:
+      - Ad Audiences
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateAdAudience
+      summary: Update an ad audience
+      tags:
+      - Ad Audiences
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /ad-reports:
+    post:
+      operationId: createAdReport
+      summary: Create an ad report
+      tags:
+      - Ad Reports
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id007
+                $ref: '#/components/schemas/AdReport'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+    get:
+      operationId: listAdReports
+      summary: List ad reports
+      tags:
+      - Ad Reports
+      x-commons-tier: extended
+      x-commons-share: 0.444
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id007
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /ad-reports/{ad_report_id}:
+    parameters:
+    - $ref: '#/components/parameters/ad_report_id'
+    get:
+      operationId: getAdReport
+      summary: Get an ad report
+      tags:
+      - Ad Reports
+      x-commons-tier: extended
+      x-commons-share: 0.444
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+components:
+  schemas:
+    AdAccount:
+      $ref: ./schema/ad_account.json
+    AdCampaign:
+      $ref: ./schema/ad_campaign.json
+    AdGroup:
+      $ref: ./schema/ad_group.json
+    Ad:
+      $ref: ./schema/ad.json
+    Creative:
+      $ref: ./schema/creative.json
+    AdAudience:
+      $ref: ./schema/ad_audience.json
+    AdReport:
+      $ref: ./schema/ad_report.json
+  parameters:
+    ad_account_id:
+      name: ad_account_id
+      in: path
+      required: true
+      schema:
+        type: string
+    ad_campaign_id:
+      name: ad_campaign_id
+      in: path
+      required: true
+      schema:
+        type: string
+    ad_group_id:
+      name: ad_group_id
+      in: path
+      required: true
+      schema:
+        type: string
+    ad_id:
+      name: ad_id
+      in: path
+      required: true
+      schema:
+        type: string
+    creative_id:
+      name: creative_id
+      in: path
+      required: true
+      schema:
+        type: string
+    ad_audience_id:
+      name: ad_audience_id
+      in: path
+      required: true
+      schema:
+        type: string
+    ad_report_id:
+      name: ad_report_id
+      in: path
+      required: true
+      schema:
+        type: string

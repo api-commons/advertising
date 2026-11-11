@@ -1,0 +1,63 @@
+aid: common-advertising
+name: Advertising
+type: Common
+description: 'The common Advertising vocabulary, distilled from the harvested OpenAPI of 134 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Advertising
+- AdTech
+- Ad Tech
+- Programmatic
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/advertising/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-advertising:advertising
+  name: Common Advertising Interface
+  description: The Advertising interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/advertising
+  tags:
+  - Advertising
+  - AdTech
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: ad_account
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_account.json
+  - type: JSONSchema
+    name: ad_campaign
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_campaign.json
+  - type: JSONSchema
+    name: ad_group
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_group.json
+  - type: JSONSchema
+    name: ad
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad.json
+  - type: JSONSchema
+    name: creative
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/creative.json
+  - type: JSONSchema
+    name: ad_audience
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_audience.json
+  - type: JSONSchema
+    name: ad_report
+    url: https://raw.githubusercontent.com/api-commons/advertising/main/schema/ad_report.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/advertising/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

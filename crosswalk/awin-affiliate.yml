@@ -1,0 +1,14 @@
+provider: awin-affiliate
+apis_io: https://apis.io/providers/awin-affiliate/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertiser
+    properties:
+      account_id: advertiserId
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/awin-affiliate-openapi.yml#GET /publishers/{publisherId}/reports/advertiser

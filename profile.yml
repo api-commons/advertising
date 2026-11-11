@@ -1,0 +1,1071 @@
+context: advertising
+name: Advertising
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Advertising
+  - AdTech
+  - Ad Tech
+  - Programmatic
+  - Programmatic Advertising
+  - Digital Advertising
+  - Performance Marketing
+  - Ad Network
+  - Retail Media
+  providers_with_harvested_openapi: 134
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  ad_account:
+    adslighthouse: ad-intelligence listings of other companies' advertisers
+    adsmom-inc: ad-intelligence listings of other companies' advertisers
+duplicates:
+  liveramp:
+  - habu
+  magnite:
+  - rubicon-project
+  later:
+  - mavrck
+  prorataai:
+  - gist
+shared_specs: {}
+concepts:
+  ad_account:
+    segments_seen:
+      advertisers: 14
+      advertiser: 7
+      ad-accounts: 3
+      accounts: 2
+      adaccounts: 1
+      ad_accounts: 1
+    providers_exposing: 25
+    providers_with_readable_schema: 23
+    operations:
+    - operation: GET collection
+      providers: 20
+      share: 0.8
+      tier: core
+    - operation: GET item
+      providers: 14
+      share: 0.56
+      tier: core
+    - operation: POST collection
+      providers: 14
+      share: 0.56
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.24
+      tier: extended
+    - operation: DELETE item
+      providers: 4
+      share: 0.16
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.08
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.04
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.04
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 12
+      share: 0.522
+      type: string
+      spellings:
+      - name
+      - title
+      - displayName
+      - Name
+      - Title
+      - display_name
+    - name: id
+      tier: extended
+      providers: 11
+      share: 0.478
+      type: string
+      spellings:
+      - id
+      - Id
+    - name: account_id
+      tier: extended
+      providers: 10
+      share: 0.435
+      type: integer
+      spellings:
+      - advertiserId
+      - ad_account_id
+      - advertiser_id
+      - AdvertiserId
+      - accountId
+    - name: created_at
+      tier: extended
+      providers: 8
+      share: 0.348
+      type: string
+      spellings:
+      - createdAt
+      - DateCreated
+      - Created
+      - created
+      - created_on
+      - created_at
+    - name: status
+      tier: extended
+      providers: 7
+      share: 0.304
+      type: string
+      spellings:
+      - status
+      - State
+    - name: currency
+      tier: extended
+      providers: 6
+      share: 0.261
+      type: string
+      spellings:
+      - currency
+      - Currency
+    - name: updated_at
+      tier: extended
+      providers: 5
+      share: 0.217
+      type: string
+      spellings:
+      - updatedAt
+      - updateTime
+      - LastModified
+      - updated_at
+    long_tail_count: 220
+    long_tail_sample:
+    - description
+    - metadata
+    - time_zone
+    - advertiser_name
+    - type
+    - version
+    - ad_account_name
+    - business_id
+    - clicks
+    - country
+    - data_load_trace_id
+    - data_name
+    - data_origins
+    - data_provider_id
+    - domain
+    - error_code
+    - external_id
+    - features
+    - impressions
+    - is_deleted
+    - item_number
+    - items
+    - pagination
+    - partner_id
+    - request_type
+    - tdid
+    - vertical
+    - website
+    - about
+    - account_manager
+    - account_setup
+    - action
+    - active
+    - ad_account
+    - ad_server_config
+    - ad_server_fee
+    - ad_server_id
+    - adapter_type
+    - address
+    - address_line1
+  ad_campaign:
+    segments_seen:
+      campaigns: 15
+      campaign: 4
+      ad-campaigns: 1
+    providers_exposing: 16
+    providers_with_readable_schema: 16
+    operations:
+    - operation: GET collection
+      providers: 16
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 14
+      share: 0.875
+      tier: core
+    - operation: GET item
+      providers: 13
+      share: 0.812
+      tier: core
+    - operation: UPDATE item
+      providers: 11
+      share: 0.688
+      tier: core
+    - operation: DELETE item
+      providers: 10
+      share: 0.625
+      tier: core
+    - operation: UPDATE collection
+      providers: 5
+      share: 0.312
+      tier: extended
+    - operation: DELETE collection
+      providers: 2
+      share: 0.125
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 14
+      share: 0.875
+      type: string
+      spellings:
+      - name
+      - campaign_name
+      - displayName
+      - campaignName
+      - adgroup_name
+      - display_name
+      - title
+    - name: id
+      tier: core
+      providers: 11
+      share: 0.688
+      type: string
+      spellings:
+      - id
+      - ad_campaign_id
+      - adgroup_id
+    - name: account_id
+      tier: core
+      providers: 10
+      share: 0.625
+      type: string
+      spellings:
+      - account_id
+      - advertiserId
+      - ad_account_id
+      - accountId
+      - profile_id
+      - advertiser
+    - name: status
+      tier: core
+      providers: 10
+      share: 0.625
+      type: string
+      spellings:
+      - status
+      - state
+      - effective_status
+      - serving_status
+      - configured_status
+      - delivery_status
+    - name: budget
+      tier: core
+      providers: 8
+      share: 0.5
+      type: number
+      spellings:
+      - budget
+      - daily_budget
+      - dailyBudget
+      - lifetime_budget
+    - name: campaign_id
+      tier: core
+      providers: 8
+      share: 0.5
+      type: string
+      spellings:
+      - campaign_id
+      - campaignId
+    - name: created_at
+      tier: core
+      providers: 8
+      share: 0.5
+      type: string
+      spellings:
+      - created_at
+      - created_time
+      - created_date
+      - createdAt
+    - name: end_date
+      tier: core
+      providers: 8
+      share: 0.5
+      type: string
+      spellings:
+      - end_date
+      - endDate
+      - stop_time
+    - name: start_date
+      tier: core
+      providers: 8
+      share: 0.5
+      type: string
+      spellings:
+      - start_date
+      - startDate
+      - start_time
+    - name: updated_at
+      tier: core
+      providers: 8
+      share: 0.5
+      type: string
+      spellings:
+      - updated_at
+      - updated_time
+      - updateTime
+      - updated_date
+      - updatedAt
+    - name: objective
+      tier: extended
+      providers: 7
+      share: 0.438
+      type: string
+      spellings:
+      - type
+      - objective
+      - goal
+      - campaignObjective
+      - optimization_goal
+    long_tail_count: 419
+    long_tail_sample:
+    - campaign_type
+    - description
+    - metadata
+    - ad_groups
+    - bid_strategy
+    - brand_id
+    - budget_type
+    - buying_type
+    - clicks
+    - conversion_rate
+    - conversions
+    - cpm
+    - ctr
+    - currency
+    - date
+    - end_date_time
+    - impressions
+    - is_deleted
+    - pagination
+    - spend
+    - start_date_time
+    - targeting_type
+    - account_billing_source_id
+    - account_executives
+    - account_managers
+    - account_name
+    - account_team
+    - active_from
+    - active_to
+    - ad_campaign_name
+    - ad_group
+    - ad_operation_type
+    - ad_set_delivery_status
+    - ad_tracking_allowance
+    - ad_type
+    - additional_metrics
+    - address
+    - adgroup_budget
+    - agency_id
+    - agent_name
+  ad_group:
+    segments_seen:
+      adgroups: 4
+      ad-groups: 4
+      lineitems: 3
+      ad_groups: 3
+      line-items: 2
+      adsets: 2
+      line_items: 1
+      ad-sets: 1
+    providers_exposing: 16
+    providers_with_readable_schema: 16
+    operations:
+    - operation: GET collection
+      providers: 15
+      share: 0.938
+      tier: core
+    - operation: POST collection
+      providers: 13
+      share: 0.812
+      tier: core
+    - operation: GET item
+      providers: 10
+      share: 0.625
+      tier: core
+    - operation: DELETE item
+      providers: 8
+      share: 0.5
+      tier: core
+    - operation: UPDATE item
+      providers: 7
+      share: 0.438
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.125
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.125
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 14
+      share: 0.875
+      type: string
+      spellings:
+      - id
+      - adGroupId
+      - ad_group_id
+      - adgroup_id
+    - name: name
+      tier: core
+      providers: 12
+      share: 0.75
+      type: string
+      spellings:
+      - name
+      - displayName
+      - adgroup_name
+      - campaign_name
+      - display_name
+      - title
+    - name: campaign_id
+      tier: core
+      providers: 11
+      share: 0.688
+      type: string
+      spellings:
+      - campaign_id
+      - campaignId
+    - name: account_id
+      tier: extended
+      providers: 7
+      share: 0.438
+      type: string
+      spellings:
+      - advertiserId
+      - account_id
+      - accountId
+      - ad_account_id
+      - profile_id
+    - name: status
+      tier: extended
+      providers: 7
+      share: 0.438
+      type: string
+      spellings:
+      - status
+      - state
+      - effective_status
+      - configured_status
+      - delivery_status
+    - name: targeting
+      tier: extended
+      providers: 7
+      share: 0.438
+      type: object
+      spellings:
+      - targeting
+      - audiences
+      - audience
+      - targetings
+    - name: updated_at
+      tier: extended
+      providers: 7
+      share: 0.438
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - updated_time
+      - updateTime
+      - updated_date
+    - name: created_at
+      tier: extended
+      providers: 6
+      share: 0.375
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created_time
+      - created_date
+    - name: end_date
+      tier: extended
+      providers: 5
+      share: 0.312
+      type: string
+      spellings:
+      - end_date
+      - end_time
+      - endDate
+    - name: start_date
+      tier: extended
+      providers: 5
+      share: 0.312
+      type: string
+      spellings:
+      - start_date
+      - start_time
+      - startDate
+    - name: bid
+      tier: extended
+      providers: 4
+      share: 0.25
+      type: number
+      spellings:
+      - defaultBid
+      - bid_amount
+      - default_bid
+      - bid
+    - name: type
+      tier: extended
+      providers: 4
+      share: 0.25
+      type: string
+      spellings:
+      - type
+    long_tail_count: 372
+    long_tail_sample:
+    - budget
+    - metadata
+    - audience_name
+    - bid_strategy
+    - budget_type
+    - creative_id
+    - frequency_cap
+    - impressions
+    - line_item_id
+    - optimization_goal
+    - pace
+    - product_id
+    - spend
+    - tracking_pixels
+    - account_name
+    - active_from
+    - active_to
+    - ad_group_format
+    - ad_group_inventory_control
+    - ad_group_name
+    - ad_group_overviews
+    - ad_group_status
+    - ad_group_type
+    - ad_package
+    - ad_server
+    - ad_serving_cost
+    - ad_serving_estimated_clicks
+    - ad_serving_estimated_impressions
+    - ad_serving_rate
+    - ad_serving_rate_type
+    - ad_serving_spend_contracted
+    - ad_sizes
+    - added_cost_cpm
+    - address
+    - adgroup_end_date
+    - adgroup_start_date
+    - adgroup_tav_lower_estimate
+    - adgroup_tav_point_estimate
+    - adgroup_tav_upper_estimate
+    - adgroups_today_spend
+  ad:
+    segments_seen:
+      ads: 7
+      ad: 1
+    providers_exposing: 7
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 5
+      share: 0.714
+      tier: core
+    - operation: GET item
+      providers: 4
+      share: 0.571
+      tier: core
+    - operation: DELETE item
+      providers: 3
+      share: 0.429
+      tier: extended
+    - operation: UPDATE item
+      providers: 2
+      share: 0.286
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.143
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 6
+      share: 0.857
+      type: integer
+      spellings:
+      - id
+      - ad_id
+      - adId
+    - name: name
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - name
+      - ad_name
+    - name: creative_id
+      tier: core
+      providers: 4
+      share: 0.571
+      type: object
+      spellings:
+      - creative
+      - creativeId
+    - name: ad_group_id
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: integer
+      spellings:
+      - adGroupId
+      - adset_id
+      - ad_group_id
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - status
+      - effective_status
+      - configured_status
+      - delivery_status
+    long_tail_count: 40
+    long_tail_sample:
+    - created_at
+    - updated_at
+    - account_id
+    - ad_status
+    - ad_type
+    - bid
+    - brands
+    - campaign_id
+    - carousel_creative_info
+    - catalog_carousel_creative_info
+    - catalog_image_creative_info
+    - click_destination_type
+    - create_date_time
+    - create_user
+    - cta_label
+    - destination_url
+    - entities
+    - error_message
+    - filters_applied
+    - format
+    - from
+    - image_creative_info
+    - impression_measurement
+    - is_deleted
+    - is_migrated_from_v1
+    - is_price_label_enabled
+    - limit
+    - metadata
+    - moderation_status
+    - op
+    - parent
+    - path
+    - rejection_reasons
+    - submission_status
+    - tracking
+    - type
+    - update_date_time
+    - update_user
+    - url_tracking_parameters
+    - video_creative_info
+  creative:
+    segments_seen:
+      creatives: 9
+      adcreatives: 1
+      creative: 1
+    providers_exposing: 10
+    providers_with_readable_schema: 9
+    operations:
+    - operation: GET collection
+      providers: 10
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 9
+      share: 0.9
+      tier: core
+    - operation: GET item
+      providers: 8
+      share: 0.8
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.6
+      tier: core
+    - operation: DELETE item
+      providers: 4
+      share: 0.4
+      tier: extended
+    - operation: DELETE collection
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 9
+      share: 1.0
+      type: string
+      spellings:
+      - id
+      - creativeId
+      - adgroup_id
+      - creative_id
+      - adId
+    - name: name
+      tier: core
+      providers: 9
+      share: 1.0
+      type: string
+      spellings:
+      - name
+      - title
+      - displayName
+      - campaign_name
+      - adgroup_name
+      - display_name
+    - name: type
+      tier: core
+      providers: 7
+      share: 0.778
+      type: string
+      spellings:
+      - type
+      - creativeType
+      - media_type
+      - creative_type
+    - name: account_id
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - advertiserId
+      - account_id
+      - ad_account_id
+    - name: brand_id
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: integer
+      spellings:
+      - brandId
+      - brand_id
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - updateTime
+      - updated_date
+      - updated_at
+    - name: url
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - image_url
+      - thumbnail_url
+      - video_url
+      - previewUrl
+    long_tail_count: 257
+    long_tail_sample:
+    - created_at
+    - end_date
+    - metadata
+    - pagination
+    - retailer_id
+    - start_date
+    - status
+    - template_id
+    - template_variable_values
+    - vast_tag_url
+    - video
+    - a_id
+    - a_name
+    - account_name
+    - ad_classification
+    - additional_dimensions
+    - address
+    - adgroup_budget
+    - advertiser_bid_type
+    - advertiser_info
+    - api_type
+    - appended_tag
+    - asset_id
+    - asset_validations
+    - assets
+    - audience_name
+    - audio_url
+    - banner_image_url
+    - blocked
+    - body
+    - brand_name
+    - breakout
+    - breakout_value
+    - budget_type
+    - c_name
+    - call_to_action_type
+    - campaign_budget
+    - campaign_end_date
+    - campaign_id
+    - campaign_start_date
+  ad_audience:
+    segments_seen:
+      audiences: 7
+      audience: 2
+      customaudiences: 1
+      custom_audiences: 1
+    providers_exposing: 9
+    providers_with_readable_schema: 9
+    operations:
+    - operation: GET collection
+      providers: 9
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 6
+      share: 0.667
+      tier: core
+    - operation: GET item
+      providers: 3
+      share: 0.333
+      tier: extended
+    - operation: UPDATE item
+      providers: 3
+      share: 0.333
+      tier: extended
+    - operation: DELETE item
+      providers: 2
+      share: 0.222
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - name
+    - name: id
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - id
+    - name: source
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - type
+      - subtype
+      - data_source
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: object
+      spellings:
+      - delivery_status
+      - operation_status
+      - status
+      - configured_status
+    long_tail_count: 56
+    long_tail_sample:
+    - audience_id
+    - category
+    - created_at
+    - description
+    - updated_at
+    - account_id
+    - ads_engagement_rules
+    - audience_description
+    - audience_id_list_rules
+    - audience_name
+    - audience_segmentation_type_id
+    - clicks
+    - composition
+    - cpm
+    - create_date_time
+    - create_user
+    - custom_audience_id
+    - customer_file_source
+    - derived_status
+    - error
+    - expr
+    - extra
+    - from
+    - household_reach
+    - impressions
+    - is_deleted
+    - is_user_saved_audience
+    - key
+    - keyword_rules
+    - last_refreshed
+    - locations
+    - lookalike_spec
+    - metadata
+    - min_cpm
+    - mix_with
+    - number_of_members
+    - op
+    - org_id
+    - pagination
+    - path
+  ad_report:
+    segments_seen:
+      reports: 6
+      report: 4
+      insights: 3
+      performance: 1
+    providers_exposing: 9
+    providers_with_readable_schema: 8
+    operations:
+    - operation: POST collection
+      providers: 6
+      share: 0.667
+      tier: core
+    - operation: GET collection
+      providers: 4
+      share: 0.444
+      tier: extended
+    - operation: GET item
+      providers: 4
+      share: 0.444
+      tier: extended
+    - operation: DELETE item
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.111
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 4
+      share: 0.5
+      type: string
+      spellings:
+      - id
+      - ad_id
+    - name: campaign_id
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - campaign_id
+    - name: date
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - date_start
+      - reportDate
+      - date
+    - name: metrics
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - metrics
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - status
+    long_tail_count: 135
+    long_tail_sample:
+    - account_id
+    - clicks
+    - conversions
+    - cpc
+    - cpm
+    - created_at
+    - ctr
+    - currency
+    - date_range
+    - dimensions
+    - impressions
+    - limit
+    - metadata
+    - name
+    - roas
+    - timezone
+    - type
+    - updated_at
+    - acos
+    - ad_account_title
+    - ad_set_ids
+    - ad_set_names
+    - ad_set_status
+    - adset_id
+    - adset_name
+    - advertiser_ids
+    - asset_id
+    - brand_context_snapshot
+    - breakdown_type
+    - budget_allocation
+    - business_inputs
+    - campaign_title
+    - catalog_item_id
+    - catalog_item_title
+    - click_count
+    - competitor_id
+    - competitor_name
+    - cpc_cents
+    - cpm_cents
+    - cpm_item

@@ -1,0 +1,15 @@
+provider: linkedin-ads
+apis_io: https://apis.io/providers/linkedin-ads/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - adaccounts
+    properties:
+      name: name
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/linkedin-ads-openapi.yml#GET /adAccounts/{adAccountId}
+    - openapi/_original/linkedin-ads-openapi.yml#POST /adAccounts

@@ -1,0 +1,98 @@
+provider: moloco
+apis_io: https://apis.io/providers/moloco/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - ad-accounts
+    properties:
+      name: title
+      id: id
+      created_at: created_at
+      currency: currency
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mcm-management-api.json#GET /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts
+    - openapi/_original/mcm-management-api.json#GET /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}
+    - openapi/_original/mcm-management-api.json#POST /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts
+    - openapi/_original/mcm-management-api.json#PUT /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#DELETE /cm/v1/ad-accounts/{ad_account_id}
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name: title
+      id: id
+      account_id: ad_account_id
+      status:
+      - state
+      - serving_status
+      budget:
+      - daily_budget
+      - budget
+      created_at: created_at
+      updated_at: updated_at
+      objective:
+      - goal
+      - type
+    core_coverage: 0.7
+    evidence:
+    - openapi/_original/mcm-management-api.json#GET /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}/campaigns
+    - openapi/_original/mcm-management-api.json#GET /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}/campaigns/{campaign_id}
+    - openapi/_original/mcm-management-api.json#POST /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}/campaigns
+    - openapi/_original/mcm-management-api.json#PUT /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}/campaigns/{campaign_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#DELETE /cm/v1/campaigns/{campaign_id}
+  ad_group:
+    path_segment:
+    - ad-groups
+    properties:
+      id: id
+      name: title
+      campaign_id: campaign_id
+      account_id: ad_account_id
+      targeting: audience
+      updated_at: updated_at
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moloco-ads-campaign-management-api.json#DELETE /cm/v1/ad-groups/{ad_group_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#GET /cm/v1/ad-groups
+    - openapi/_original/moloco-ads-campaign-management-api.json#GET /cm/v1/ad-groups/{ad_group_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#POST /cm/v1/ad-groups
+    - openapi/_original/moloco-ads-campaign-management-api.json#PUT /cm/v1/ad-groups/{ad_group_id}
+  creative:
+    path_segment:
+    - creatives
+    properties:
+      id: id
+      name: title
+      type: type
+      account_id: ad_account_id
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moloco-ads-campaign-management-api.json#DELETE /cm/v1/creatives
+    - openapi/_original/moloco-ads-campaign-management-api.json#DELETE /cm/v1/creatives/{creative_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#GET /cm/v1/creatives
+    - openapi/_original/moloco-ads-campaign-management-api.json#GET /cm/v1/creatives/{creative_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#POST /cm/v1/creatives
+  ad_report:
+    path_segment:
+    - reports
+    - report
+    properties:
+      id: id
+      campaign_id: campaign_id
+      date:
+      - date
+      - date_start
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mcm-management-api.json#POST /rmp/mgmt/v1/platforms/{platform_id}/ad-accounts/{ad_account_id}/report
+    - openapi/_original/mcm-management-api.json#POST /rmp/mgmt/v1/platforms/{platform_id}/ad-manager-accounts/{ad_manager_account_id}/report
+    - openapi/_original/mcm-management-api.json#POST /rmp/mgmt/v1/platforms/{platform_id}/report
+    - openapi/_original/moloco-ads-campaign-management-api.json#DELETE /cm/v1/reports/{report_id}
+    - openapi/_original/moloco-ads-campaign-management-api.json#GET /cm/v1/reports

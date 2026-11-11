@@ -1,0 +1,71 @@
+provider: cardlytics
+apis_io: https://apis.io/providers/cardlytics/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name: name
+      account_id: accountId
+      budget: budget
+      campaign_id: campaignId
+      objective: campaignObjective
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#DELETE /v7/accounts/{accountId}/Campaigns/{campaignId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/Campaigns
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/Campaigns/{campaignId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/accounts/{accountId}/Campaigns
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/accounts/{accountId}/Campaigns/{campaignId}
+  ad_group:
+    path_segment:
+    - adgroups
+    properties:
+      id: adGroupId
+      name: name
+      campaign_id: campaignId
+      account_id: accountId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#DELETE /v6/accounts/{accountId}/AdGroups/{adGroupId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v6/AdGroups
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v6/AdGroups/{adGroupId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v6/accounts/{accountId}/AdGroups
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v6/accounts/{accountId}/AdGroups/{adGroupId}
+  ad:
+    path_segment:
+    - ads
+    properties:
+      id: adId
+      name: name
+      creative_id: creativeId
+      ad_group_id: adGroupId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#DELETE /v7/accounts/{accountId}/Ads/{adId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/Ads
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/Ads/{adId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/accounts/{accountId}/Ads
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v7/accounts/{accountId}/Ads/{adId}
+  ad_audience:
+    path_segment:
+    - audiences
+    properties:
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v8/Audiences
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v8/Audiences/{audienceId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v8/accounts/{accountId}/Audiences
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#GET /v8/accounts/{accountId}/Audiences/{audienceId}
+    - openapi/_original/cardlytics-campaign-build-api-openapi.json#PATCH /v8/accounts/{accountId}/Audiences/{audienceId}
+  ad_report:
+    path_segment:
+    - reports
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cardlytics-partner-api-openapi.json#POST /api/v1/partner/merchants/{external_merchant_id}/reports
+    - openapi/_original/cardlytics-partner-api-openapi.yml#POST /api/v1/partner/merchants/{external_merchant_id}/reports

@@ -1,0 +1,44 @@
+provider: basis
+apis_io: https://apis.io/providers/basis/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name: name
+      id: id
+      status: status
+      created_at: created_at
+      end_date: end_date
+      start_date: start_date
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/basis-platform-api.json#GET /v1/campaigns
+    - openapi/_original/basis-platform-api.json#GET /v1/campaigns/{id}
+  ad_group:
+    path_segment:
+    - line_items
+    properties:
+      id: id
+      name: name
+      campaign_id: campaign_id
+      end_date: end_date
+      start_date: start_date
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/basis-platform-api.json#GET /v1/campaigns/{campaign_id}/line_items
+    - openapi/_original/basis-platform-api.json#GET /v1/campaigns/{campaign_id}/line_items/{id}
+  creative:
+    path_segment:
+    - creatives
+    properties:
+      id: id
+      name: name
+      type: media_type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/basis-platform-api.json#GET /v1/creatives
+    - openapi/_original/basis-platform-api.json#GET /v1/creatives/{id}

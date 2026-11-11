@@ -1,0 +1,53 @@
+provider: streetmetrics
+apis_io: https://apis.io/providers/streetmetrics/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaigns
+    - campaign
+    properties:
+      name: displayName
+      id: id
+      account_id: advertiser
+      budget: budget
+      campaign_id: campaignId
+      created_at: createdAt
+      updated_at: updatedAt
+      objective:
+      - goal
+      - type
+    core_coverage: 0.7
+    evidence:
+    - openapi/_original/streetmetrics-public-api-docs-json.json#DELETE /public/campaigns/{id}
+    - openapi/_original/streetmetrics-public-api-docs-json.json#DELETE /public/pixels/{pixelId}/campaign
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/campaigns
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/campaigns/{id}
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/reporting/uf/ad-group/campaign/{campaignId}
+  ad_group:
+    path_segment:
+    - ad-groups
+    properties:
+      updated_at: updatedAt
+      created_at: createdAt
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/streetmetrics-public-api-docs-json.json#DELETE /public/ad-groups/{id}
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/ad-groups
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/ad-groups/{id}
+    - openapi/_original/streetmetrics-public-api-openapi.json#DELETE /ad-groups/{id}
+    - openapi/_original/streetmetrics-public-api-openapi.json#GET /ad-groups
+  creative:
+    path_segment:
+    - creatives
+    properties:
+      id: creativeId
+      name: displayName
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/creatives
+    - openapi/_original/streetmetrics-public-api-docs-json.json#GET /public/creatives/{id}
+    - openapi/_original/streetmetrics-public-api-docs-json.json#POST /public/ad-groups/{id}/creatives
+    - openapi/_original/streetmetrics-public-api-openapi.json#GET /creatives
+    - openapi/_original/streetmetrics-public-api-openapi.json#GET /creatives/{id}

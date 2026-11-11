@@ -1,0 +1,16 @@
+provider: mntn
+apis_io: https://apis.io/providers/mntn/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties:
+      account_id: advertiserId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mntn-ptv-advertisers-openapi.yml#GET /api/v1/advertisers
+    - openapi/_original/mntn-ptv-advertisers-openapi.yml#GET /api/v1/advertisers/{id}
+    - openapi/_original/mntn-ptv-openapi.json#GET /api/v1/advertisers
+    - openapi/_original/mntn-ptv-openapi.json#GET /api/v1/advertisers/{id}

@@ -1,0 +1,95 @@
+provider: smartnews
+apis_io: https://apis.io/providers/smartnews/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - ad_accounts
+    properties:
+      account_id: ad_account_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/bm/v1/developer_apps/me/ad_accounts
+  ad_campaign:
+    path_segment:
+    - campaigns
+    properties:
+      name: name
+      account_id: ad_account_id
+      status:
+      - configured_status
+      - delivery_status
+      campaign_id: campaign_id
+      created_at: created_at
+      updated_at: updated_at
+      objective:
+      - objective
+      - optimization_goal
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/smartnews-marketing-openapi.json#DELETE /api/ma/v3/ad_accounts/{ad_account_id}/campaigns/{campaign_id}
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/campaigns
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/campaigns/{campaign_id}
+    - openapi/_original/smartnews-marketing-openapi.json#PATCH /api/ma/v3/ad_accounts/{ad_account_id}/campaigns/{campaign_id}
+    - openapi/_original/smartnews-marketing-openapi.json#POST /api/ma/v3/ad_accounts/{ad_account_id}/campaigns
+  ad_group:
+    path_segment:
+    - ad_groups
+    properties:
+      id: ad_group_id
+      name: name
+      campaign_id: campaign_id
+      status:
+      - configured_status
+      - delivery_status
+      targeting: audience
+      updated_at: updated_at
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/smartnews-marketing-openapi.json#DELETE /api/ma/v3/ad_accounts/{ad_account_id}/ad_groups/{ad_group_id}
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/ad_groups
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/ad_groups/{ad_group_id}
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/campaigns/{campaign_id}/ad_groups
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/custom_audiences/{custom_audience_id}/ad_groups
+  ad:
+    path_segment:
+    - ads
+    properties:
+      id: ad_id
+      name: name
+      creative_id: creative
+      status:
+      - configured_status
+      - delivery_status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/smartnews-marketing-openapi.json#DELETE /api/ma/v3/ad_accounts/{ad_account_id}/ads/{ad_id}
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/ad_groups/{ad_group_id}/ads
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/ads
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/ads/{ad_id}
+    - openapi/_original/smartnews-marketing-openapi.json#PATCH /api/ma/v3/ad_accounts/{ad_account_id}/ads/{ad_id}
+  ad_audience:
+    path_segment:
+    - custom_audiences
+    properties:
+      name: name
+      source: type
+      status: configured_status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/smartnews-marketing-openapi.json#DELETE /api/ma/v3/ad_accounts/{ad_account_id}/custom_audiences/{custom_audience_id}
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/custom_audiences
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/custom_audiences/{custom_audience_id}
+    - openapi/_original/smartnews-marketing-openapi.json#PATCH /api/ma/v3/ad_accounts/{ad_account_id}/custom_audiences/{custom_audience_id}
+    - openapi/_original/smartnews-marketing-openapi.json#POST /api/ma/v3/ad_accounts/{ad_account_id}/custom_audiences
+  ad_report:
+    path_segment:
+    - insights
+    properties:
+      id: id
+      metrics: metrics
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/insights/{layer}

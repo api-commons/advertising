@@ -1,0 +1,12 @@
+provider: avito
+apis_io: https://apis.io/providers/avito/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/avito-ads-openapi.json#POST /ads/v1/account/{accountID}/advertisers

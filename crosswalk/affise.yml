@@ -1,0 +1,18 @@
+provider: affise
+apis_io: https://apis.io/providers/affise/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertiser
+    - advertisers
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/affise-openapi-original.yml#GET /3.0/admin/advertiser/{id}
+    - openapi/_original/affise-openapi-original.yml#GET /3.0/admin/advertisers
+    - openapi/_original/affise-openapi-original.yml#POST /3.0/admin/advertiser
+    - openapi/_original/affise-openapi-original.yml#POST /3.0/admin/advertiser/{id}
+    - openapi/_original/affise-openapi.yml#GET /3.0/admin/advertiser/{id}

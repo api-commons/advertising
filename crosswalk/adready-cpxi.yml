@@ -1,0 +1,91 @@
+provider: adready-cpxi
+apis_io: https://apis.io/providers/adready-cpxi/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_account:
+    path_segment:
+    - advertisers
+    - advertiser
+    properties:
+      name: name
+      id: id
+      account_id: accountId
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/advertisers
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/advertisers/{advertiserId}
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/pixels/advertiser/{advertiserId}
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/users/advertiser
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#POST /api/advertisers
+  ad_campaign:
+    path_segment:
+    - campaign
+    - campaigns
+    properties:
+      name: campaign_name
+      account_id: account_id
+      status: status
+      campaign_id: campaign_id
+      created_at: created_at
+      end_date: end_date
+      start_date: start_date
+      updated_at: updated_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#DELETE /api/advertisers/{advertiserId}/brand_lift/campaigns/{blCampaignId}
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#DELETE /api/dmm/campaign
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ac/advertisers/{advertiserId}/campaigns
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/advertisers/{advertiserId}/brand_lift/campaign/{bl_campaign_id}
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/advertisers/{advertiserId}/brand_lift/campaigns
+  ad_group:
+    path_segment:
+    - lineitems
+    - ad_groups
+    properties:
+      id: id
+      name: name
+      targeting: targetings
+      updated_at: updatedAt
+      created_at: createdAt
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#DELETE /api/ios/{insertionOrderId}/lineItems/{lineItemId}
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ios/lineItems
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ios/{insertionOrderId}/lineItems
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#POST /api/ac/advertisers/{advertiserId}/ad_groups
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#POST /api/files/{orderId}/lineItems/{lineItemId}
+  creative:
+    path_segment:
+    - creatives
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ac/advertisers/{advertiserId}/creatives
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#POST /api/advertisers/{advertiserId}/creatives
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#GET /api/ac/advertisers/{advertiserId}/creatives
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#POST /api/advertisers/{advertiserId}/creatives
+  ad_audience:
+    path_segment:
+    - audiences
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ac/advertisers/{advertiserId}/audiences
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#POST /api/advertisers/{advertiserId}/audiences
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#GET /api/ac/advertisers/{advertiserId}/audiences
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#POST /api/advertisers/{advertiserId}/audiences
+  ad_report:
+    path_segment:
+    - reports
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ac/advertisers/{advertiserId}/solutions/{solutionId}/search/reports
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ac/advertisers/{advertiserId}/solutions/{solutionId}/social/reports
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#POST /api/ac/advertisers/{advertiserId}/solutions/{solutionId}/brand/reports
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#GET /api/ac/advertisers/{advertiserId}/solutions/{solutionId}/search/reports
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#GET /api/ac/advertisers/{advertiserId}/solutions/{solutionId}/social/reports

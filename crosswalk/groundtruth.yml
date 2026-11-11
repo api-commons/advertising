@@ -1,0 +1,104 @@
+provider: groundtruth
+apis_io: https://apis.io/providers/groundtruth/
+context: advertising
+generated: '2026-11-10'
+concepts:
+  ad_campaign:
+    path_segment:
+    - campaign
+    - campaigns
+    properties:
+      name:
+      - name
+      - campaign_name
+      - adgroup_name
+      - display_name
+      id:
+      - id
+      - adgroup_id
+      account_id: account_id
+      status:
+      - status
+      - state
+      budget: budget
+      campaign_id: campaign_id
+      created_at: created_date
+      end_date: end_date
+      start_date: start_date
+      updated_at: updated_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/groundtruth-openapi.json#DELETE /campaigns/{campaign_id}
+    - openapi/_original/groundtruth-openapi.json#GET /campaigns
+    - openapi/_original/groundtruth-openapi.json#GET /campaigns/{campaign_id}
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/behavioral/campaign/{campaign_id}
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/category/campaign/{campaign_id}
+  ad_group:
+    path_segment:
+    - adgroups
+    properties:
+      id:
+      - id
+      - adgroup_id
+      name:
+      - name
+      - adgroup_name
+      - campaign_name
+      - display_name
+      campaign_id: campaign_id
+      account_id: account_id
+      status:
+      - status
+      - state
+      targeting: audiences
+      updated_at: updated_date
+      created_at: created_date
+      end_date: end_date
+      start_date: start_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/groundtruth-openapi.json#DELETE /adgroups/{adgroup_id}
+    - openapi/_original/groundtruth-openapi.json#GET /adgroups
+    - openapi/_original/groundtruth-openapi.json#GET /adgroups/{adgroup_id}
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/behavioral/campaigns/{campaign_id}/adgroups
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/category/campaign/{campaign_id}/adgroups
+  creative:
+    path_segment:
+    - creatives
+    - creative
+    properties:
+      id:
+      - id
+      - adgroup_id
+      - creative_id
+      name:
+      - name
+      - campaign_name
+      - adgroup_name
+      - display_name
+      type:
+      - type
+      - creative_type
+      account_id: account_id
+      brand_id: brand_id
+      updated_at: updated_date
+      url:
+      - thumbnail_url
+      - video_url
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/groundtruth-openapi.json#GET /creatives
+    - openapi/_original/groundtruth-openapi.json#GET /creatives/{creative_id}
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/behavioral/campaigns/{campaign_id}/creatives
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/behavioral/creative/{creative_id}
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/audience/category/campaign/{campaign_id}/creatives
+  ad_audience:
+    path_segment:
+    - audience
+    - audiences
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/product/adgroup/{adgroup_id}/audience
+    - openapi/_original/groundtruth-openapi.json#GET /reporting/product/campaign/{campaign_id}/audience
+    - openapi/_original/groundtruth-openapi.json#POST /search/audiences

@@ -1,0 +1,109 @@
+context: advertising
+name: Advertising
+intro: >-
+  The common advertising vocabulary -- the ad accounts that pay, the campaigns they run, the
+  ad groups that target and budget within them, the ads and creatives that run, the
+  audiences they reach and the performance reported back -- distilled from the APIs that
+  already exist.
+tags: [Advertising, AdTech, Ad Tech, Programmatic, Programmatic Advertising, Digital Advertising, Performance Marketing, Ad Network, Retail Media]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page, object, url, paging]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id, campaign_id, ad_id, adgroup_id, ad_group_id]
+  created_at: [created, created_date, date_created, create_time, creation_date, created_on, created_time]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, modified, updated_time, last_modified_time]
+  metadata: [meta_data, custom_fields, custom, attributes, properties]
+  status: [state, effective_status, configured_status, serving_status, operation_status, primary_status, delivery_status]
+  name: [title, display_name, label, campaign_name, ad_name, adgroup_name]
+  account_id: [account, advertiser_id, advertiser, ad_account_id, customer_id, profile_id]
+  campaign_id: [campaign, campaign_ids]
+  budget: [daily_budget, lifetime_budget, budget_amount, total_budget, budget_micros, spend_cap]
+  start_date: [start_time, start_at, starts_at, start, flight_start]
+  end_date: [end_time, end_at, ends_at, end, stop_time, flight_end]
+  currency: [currency_code]
+
+concepts:
+  ad_account:
+    segments: [ad_accounts, ad-accounts, adaccounts, advertisers, advertiser, "accounts@ads|advertising|ad|retail-media", "profiles@ads|advertising"]
+    aliases:
+      time_zone: [timezone, timezone_name, time_zone_id]
+      business_id: [business, agency_id, manager_id, organization_id]
+  ad_campaign:
+    path: /ad-campaigns
+    segments: [campaigns, campaign, ad_campaigns, ad-campaigns, sponsored_products_campaigns]
+    requires: [ad_group]
+    aliases:
+      objective: [goal, optimization_goal, campaign_objective, advertising_objective, objective_type, type]
+      bid_strategy: [bidding_strategy, bid_type, bidding, bid_strategy_type]
+  ad_group:
+    segments: [ad_groups, ad-groups, adgroups, adsets, ad_sets, ad-sets, line_items, line-items, lineitems, insertion_orders, insertion-orders, ad_squads, adsquads, flights@campaigns]
+    aliases:
+      bid: [bid_amount, default_bid, bid_micros, cpc_bid, max_bid]
+      targeting: [targeting_spec, audience, audiences, target, targetings]
+      optimization_goal: [optimization, goal, billing_event]
+  ad:
+    requires: [ad_group]
+    segments: [ads, ad, ad_ads, promoted_posts, sponsored_ads]
+    aliases:
+      ad_group_id: [ad_group, adgroup_id, adset_id, adset, line_item_id, ad_squad_id]
+      creative_id: [creative, creative_ids, creatives]
+      headline: [title, headlines]
+      destination_url: [final_url, final_urls, click_url, landing_page_url, url, link]
+  creative:
+    requires: [ad_group]
+    segments: [creatives, creative, ad_creatives, adcreatives, assets@ads|creatives, media@ads|creatives]
+    aliases:
+      type: [creative_type, format, media_type, ad_format]
+      url: [image_url, video_url, media_url, asset_url, preview_url, thumbnail_url]
+      width: [image_width]
+      height: [image_height]
+  ad_audience:
+    requires: [ad_group]
+    path: /ad-audiences
+    segments: [audiences, audience, custom_audiences, customaudiences, segments@ads|audiences|advertisers, user_lists, userlists, matched_audiences]
+    aliases:
+      size: [approximate_count, audience_size, approximate_count_lower_bound, member_count, count]
+      source: [subtype, audience_type, type, data_source]
+  ad_report:
+    requires: [ad_group]
+    path: /ad-reports
+    segments: [reports, report, insights, "stats@campaigns|ads|adgroups|ad_groups|advertisers|ad_accounts", "statistics@campaigns|ads", "performance@campaigns|ads", analytics@ads|campaigns|advertisers]
+    aliases:
+      impressions: [impression, imps, impressions_count]
+      clicks: [click, clicks_count, link_clicks]
+      spend: [cost, amount_spent, spend_micros, cost_micros, total_spend]
+      conversions: [conversion, actions, purchases]
+      date: [date_start, report_date, day, stat_date, start_date_report]
+
+exclude:
+  ad_account:
+    adslighthouse: ad-intelligence listings of other companies' advertisers
+    adsmom-inc: ad-intelligence listings of other companies' advertisers
+duplicates:
+  liveramp: [habu]
+  magnite: [rubicon-project]
+  later: [mavrck]
+  prorataai: [gist]
+
+findings:
+  - "An ad campaign agrees more than anything else in advertising: name, status, account,
+    budget, start and end dates are all core. The campaign is where ad platforms converged."
+  - "An ad group agrees on id, name and its campaign -- the hierarchy is shared even where the
+    targeting inside it is not. Meta's ad sets, DV360's line items and Amazon's ad groups are
+    one concept."
+  - "Reports agree only on an id: every platform reports impressions, clicks and spend, under
+    its own names and its own breakdowns."
+  - "Ads themselves are thin as a resource (7 providers); most platforms expose the ad through
+    its creative."
+decisions:
+  - "Ad campaigns are `/ad-campaigns` and audiences `/ad-audiences`, though ad platforms say
+    `campaigns` and `audiences`: email marketing uses both words for something else. Reports
+    are `/ad-reports` for the same reason."
+  - "An ad group covers ad sets, line items, insertion orders and ad squads: the level beneath
+    a campaign that carries budget and targeting."
+  - "Ad-intelligence tools that list other companies' advertisers are not ad accounts."
+  - "Duplicates merged: Habu into LiveRamp, Rubicon Project into Magnite, Mavrck into Later,
+    Gist into ProRata."
