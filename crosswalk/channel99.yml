@@ -24,7 +24,7 @@ concepts:
     - ad-groups
     properties:
       id: ad_group_id
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/channel99-pulsar-openapi.json#GET /dimensions/ad-groups
   ad:

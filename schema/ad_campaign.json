@@ -40,8 +40,8 @@
         "account_id",
         "advertiserId",
         "ad_account_id",
-        "accountId",
         "profile_id",
+        "accountId",
         "advertiser"
       ]
     },
@@ -59,6 +59,16 @@
         "delivery_status"
       ]
     },
+    "campaign_id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.562,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "campaign_id",
+        "campaignId"
+      ]
+    },
     "budget": {
       "type": "number",
       "x-commons-tier": "core",
@@ -69,16 +79,6 @@
         "daily_budget",
         "dailyBudget",
         "lifetime_budget"
-      ]
-    },
-    "campaign_id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 8,
-      "x-commons-spellings": [
-        "campaign_id",
-        "campaignId"
       ]
     },
     "created_at": {

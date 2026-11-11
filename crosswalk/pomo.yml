@@ -16,8 +16,8 @@ concepts:
       - account_id
       - profile_id
       status: status
-      budget: daily_budget
       campaign_id: campaign_id
+      budget: daily_budget
       created_at: created_at
       end_date: end_date
       start_date: start_date
@@ -39,7 +39,7 @@ concepts:
       - account_id
       - profile_id
       bid: default_bid
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/pomo-openapi.json#POST /api/external-platform/amazon/ad-groups
     - openapi/_original/pomo-openapi.json#POST /api/external-platform/google/ad-groups
@@ -49,8 +49,9 @@ concepts:
     path_segment:
     - ads
     - ad
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+    core_coverage: 0.333
     evidence:
     - openapi/_original/pomo-openapi.json#GET /api/ai-testing/ads
     - openapi/_original/pomo-openapi.json#GET /api/ai-testing/test/ad/{ad_id}
@@ -74,9 +75,10 @@ concepts:
     - reports
     - report
     properties:
-      id: id
       campaign_id: campaign_id
-    core_coverage: 1.0
+      clicks: clicks
+      id: id
+    core_coverage: 0.0
     evidence:
     - openapi/_original/pomo-openapi.json#GET /api/agentic/teams/{team_id}/mmm/reports
     - openapi/_original/pomo-openapi.json#GET /api/agentic/teams/{team_id}/search-readiness/reports

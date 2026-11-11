@@ -8,8 +8,8 @@ concepts:
     - advertisers
     - advertiser
     properties:
-      name: name
       id: id
+      name: name
       account_id: accountId
       created_at: createdAt
       updated_at: updatedAt
@@ -51,7 +51,7 @@ concepts:
       updated_at: updatedAt
       created_at: createdAt
       type: type
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/adready-cpxi-kickstart-openapi.json#DELETE /api/ios/{insertionOrderId}/lineItems/{lineItemId}
     - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/ios/lineItems

@@ -11,8 +11,8 @@ concepts:
       name: displayName
       id: id
       account_id: advertiser
-      budget: budget
       campaign_id: campaignId
+      budget: budget
       created_at: createdAt
       updated_at: updatedAt
       objective:

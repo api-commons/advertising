@@ -7,8 +7,11 @@ concepts:
     path_segment:
     - advertiser
     properties:
-      account_id: advertiser_id
-    core_coverage: 0.0
+      id: id
+      account_id:
+      - advertiser_id
+      - account_id
+    core_coverage: 0.5
     evidence:
     - openapi/_original/freewheel-media-advertiser-buzz-openapi-original.json#DELETE /advertiser
     - openapi/_original/freewheel-media-advertiser-buzz-openapi-original.json#GET /advertiser

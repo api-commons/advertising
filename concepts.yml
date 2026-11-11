@@ -94,7 +94,7 @@ findings:
   - "An ad group agrees on id, name and its campaign -- the hierarchy is shared even where the
     targeting inside it is not. Meta's ad sets, DV360's line items and Amazon's ad groups are
     one concept."
-  - "Reports agree only on an id: every platform reports impressions, clicks and spend, under
+  - "Reports agree on nothing: every platform reports impressions, clicks and spend, under
     its own names and its own breakdowns."
   - "Ads themselves are thin as a resource (7 providers); most platforms expose the ad through
     its creative."

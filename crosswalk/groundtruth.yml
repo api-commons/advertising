@@ -20,8 +20,8 @@ concepts:
       status:
       - status
       - state
-      budget: budget
       campaign_id: campaign_id
+      budget: budget
       created_at: created_date
       end_date: end_date
       start_date: start_date
@@ -80,7 +80,6 @@ concepts:
       - type
       - creative_type
       account_id: account_id
-      brand_id: brand_id
       updated_at: updated_date
       url:
       - thumbnail_url

@@ -5,16 +5,6 @@
   "description": "The common ad_report in Advertising, distilled from 8 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 4,
-      "x-commons-spellings": [
-        "id",
-        "ad_id"
-      ]
-    },
     "campaign_id": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -22,6 +12,43 @@
       "x-commons-providers": 3,
       "x-commons-spellings": [
         "campaign_id"
+      ]
+    },
+    "clicks": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "clicks",
+        "click"
+      ]
+    },
+    "cpc": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "cpc"
+      ]
+    },
+    "cpm": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "cpm"
+      ]
+    },
+    "ctr": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "ctr"
       ]
     },
     "date": {
@@ -35,13 +62,14 @@
         "date"
       ]
     },
-    "metrics": {
+    "id": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.375,
       "x-commons-providers": 3,
       "x-commons-spellings": [
-        "metrics"
+        "id",
+        "ad_id"
       ]
     },
     "status": {

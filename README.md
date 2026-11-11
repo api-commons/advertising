@@ -12,13 +12,13 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| ad_account | 25 | 23 | name 52% | advertisers 14, advertiser 7, ad-accounts 3, accounts 2 |
-| ad_campaign | 16 | 16 | name 88%, id 69%, account_id 62%, status 62%, budget 50%, campaign_id 50%, created_at 50%, end_date 50%, start_date 50%, updated_at 50% | campaigns 15, campaign 4, ad-campaigns 1 |
-| ad_group | 16 | 16 | id 88%, name 75%, campaign_id 69% | adgroups 4, ad-groups 4, lineitems 3, ad_groups 3 |
-| ad | 7 | 7 | id 86%, name 71%, creative_id 57% | ads 7, ad 1 |
-| creative | 10 | 9 | id 100%, name 100%, type 78% | creatives 9, adcreatives 1, creative 1 |
+| ad_account | 25 | 23 | id 61%, name 52% | advertisers 14, advertiser 7, ad-accounts 3, accounts 2 |
+| ad_campaign | 16 | 16 | name 88%, id 69%, account_id 62%, status 62%, campaign_id 56%, budget 50%, created_at 50%, end_date 50%, start_date 50%, updated_at 50% | campaigns 15, campaign 4, ad-campaigns 1 |
+| ad_group | 16 | 16 | id 88%, name 75%, campaign_id 69%, account_id 50% | adgroups 4, ad-groups 4, lineitems 3, ad_groups 3 |
+| ad | 7 | 7 | id 100%, name 71%, creative_id 57% | ads 7, ad 1 |
+| creative | 10 | 9 | id 100%, name 78%, type 78% | creatives 9, adcreatives 1, creative 1 |
 | ad_audience | 9 | 9 | name 56% | audiences 7, audience 2, customaudiences 1, custom_audiences 1 |
-| ad_report | 9 | 8 | id 50% | reports 6, report 4, insights 3, performance 1 |
+| ad_report | 9 | 8 |  | reports 6, report 4, insights 3, performance 1 |
 
 Cohort: 134 providers with harvested OpenAPI, 33 crosswalks. Of the providers exposing a ad_account: 56% create, 80% list, 56% fetch, 24% update, 16% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -30,7 +30,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 
 - An ad campaign agrees more than anything else in advertising: name, status, account, budget, start and end dates are all core. The campaign is where ad platforms converged.
 - An ad group agrees on id, name and its campaign -- the hierarchy is shared even where the targeting inside it is not. Meta's ad sets, DV360's line items and Amazon's ad groups are one concept.
-- Reports agree only on an id: every platform reports impressions, clicks and spend, under its own names and its own breakdowns.
+- Reports agree on nothing: every platform reports impressions, clicks and spend, under its own names and its own breakdowns.
 - Ads themselves are thin as a resource (7 providers); most platforms expose the ad through its creative.
 
 ## Artifacts

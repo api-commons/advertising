@@ -6,10 +6,10 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "integer",
+      "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.857,
-      "x-commons-providers": 6,
+      "x-commons-share": 1.0,
+      "x-commons-providers": 7,
       "x-commons-spellings": [
         "id",
         "ad_id",

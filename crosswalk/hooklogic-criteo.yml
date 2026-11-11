@@ -8,7 +8,7 @@ concepts:
     - accounts
     properties:
       id: id
-    core_coverage: 0.0
+    core_coverage: 0.5
     evidence:
     - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts
   ad_campaign:
@@ -30,7 +30,7 @@ concepts:
     properties:
       id: id
       type: type
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/line-items
     - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/line-items/{line-item-id}
@@ -40,10 +40,8 @@ concepts:
     - creatives
     properties:
       id: id
-      name: name
       type: type
-      brand_id: brandId
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/creatives
     - openapi/_original/hooklogic-criteo-openapi.json#GET /2026-07/retail-media/accounts/{account-id}/creatives/{creative-id}

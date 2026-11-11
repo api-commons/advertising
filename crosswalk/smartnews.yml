@@ -46,7 +46,7 @@ concepts:
       targeting: audience
       updated_at: updated_at
       created_at: created_at
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/smartnews-marketing-openapi.json#DELETE /api/ma/v3/ad_accounts/{ad_account_id}/ad_groups/{ad_group_id}
     - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/ad_groups
@@ -88,8 +88,10 @@ concepts:
     path_segment:
     - insights
     properties:
-      id: id
-      metrics: metrics
-    core_coverage: 1.0
+      clicks: click
+      cpc: cpc
+      cpm: cpm
+      ctr: ctr
+    core_coverage: 0.0
     evidence:
     - openapi/_original/smartnews-marketing-openapi.json#GET /api/ma/v3/ad_accounts/{ad_account_id}/insights/{layer}

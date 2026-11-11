@@ -9,8 +9,8 @@ concepts:
     properties:
       name: name
       account_id: accountId
-      budget: budget
       campaign_id: campaignId
+      budget: budget
       objective: campaignObjective
     core_coverage: 0.4
     evidence:

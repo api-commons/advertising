@@ -11,7 +11,9 @@ concepts:
       - name
       - campaign_name
       id: id
-      account_id: account_id
+      account_id:
+      - account_id
+      - profile_id
       status: status
       budget: budget
       end_date: end_date
@@ -30,6 +32,7 @@ concepts:
       id: id
       name: name
       campaign_id: campaign_id
+      account_id: profile_id
       status: status
       targeting: targeting
       end_date: end_date

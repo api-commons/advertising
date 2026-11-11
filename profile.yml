@@ -78,6 +78,14 @@ concepts:
       share: 0.04
       tier: long-tail
     properties:
+    - name: id
+      tier: core
+      providers: 14
+      share: 0.609
+      type: string
+      spellings:
+      - id
+      - Id
     - name: name
       tier: core
       providers: 12
@@ -90,37 +98,39 @@ concepts:
       - Name
       - Title
       - display_name
-    - name: id
+    - name: account_id
       tier: extended
       providers: 11
       share: 0.478
-      type: string
-      spellings:
-      - id
-      - Id
-    - name: account_id
-      tier: extended
-      providers: 10
-      share: 0.435
       type: integer
       spellings:
       - advertiserId
+      - accountId
       - ad_account_id
       - advertiser_id
       - AdvertiserId
-      - accountId
+      - account_id
     - name: created_at
       tier: extended
-      providers: 8
-      share: 0.348
+      providers: 10
+      share: 0.435
       type: string
       spellings:
       - createdAt
+      - created_at
       - DateCreated
       - Created
       - created
       - created_on
-      - created_at
+    - name: currency
+      tier: extended
+      providers: 7
+      share: 0.304
+      type: string
+      spellings:
+      - currency
+      - Currency
+      - currencyCode
     - name: status
       tier: extended
       providers: 7
@@ -129,66 +139,58 @@ concepts:
       spellings:
       - status
       - State
-    - name: currency
-      tier: extended
-      providers: 6
-      share: 0.261
-      type: string
-      spellings:
-      - currency
-      - Currency
     - name: updated_at
       tier: extended
-      providers: 5
-      share: 0.217
+      providers: 7
+      share: 0.304
       type: string
       spellings:
       - updatedAt
+      - updated_at
       - updateTime
       - LastModified
-      - updated_at
-    long_tail_count: 220
+    long_tail_count: 268
     long_tail_sample:
     - description
     - metadata
     - time_zone
     - advertiser_name
+    - country
     - type
     - version
+    - ad_account
     - ad_account_name
     - business_id
+    - city
     - clicks
-    - country
+    - cookie_mapping_partner_id
+    - core_id
+    - daid
     - data_load_trace_id
     - data_name
     - data_origins
     - data_provider_id
     - domain
     - error_code
+    - euid
+    - euid_token
     - external_id
     - features
+    - first_id
+    - id5
     - impressions
+    - iqvia_ppid
     - is_deleted
     - item_number
     - items
-    - pagination
+    - merkury_id
+    - net_id
     - partner_id
-    - request_type
+    - ramp_id
     - tdid
-    - vertical
-    - website
-    - about
-    - account_manager
-    - account_setup
-    - action
-    - active
-    - ad_account
-    - ad_server_config
-    - ad_server_fee
-    - ad_server_id
-    - adapter_type
-    - address
-    - address_line1
+    - uid2
+    - uid2_token
+    - utiq_id
   ad_campaign:
     segments_seen:
       campaigns: 15
@@ -257,8 +259,8 @@ concepts:
       - account_id
       - advertiserId
       - ad_account_id
-      - accountId
       - profile_id
+      - accountId
       - advertiser
     - name: status
       tier: core
@@ -272,6 +274,14 @@ concepts:
       - serving_status
       - configured_status
       - delivery_status
+    - name: campaign_id
+      tier: core
+      providers: 9
+      share: 0.562
+      type: string
+      spellings:
+      - campaign_id
+      - campaignId
     - name: budget
       tier: core
       providers: 8
@@ -282,14 +292,6 @@ concepts:
       - daily_budget
       - dailyBudget
       - lifetime_budget
-    - name: campaign_id
-      tier: core
-      providers: 8
-      share: 0.5
-      type: string
-      spellings:
-      - campaign_id
-      - campaignId
     - name: created_at
       tier: core
       providers: 8
@@ -340,12 +342,11 @@ concepts:
       - goal
       - campaignObjective
       - optimization_goal
-    long_tail_count: 419
+    long_tail_count: 435
     long_tail_sample:
     - campaign_type
     - description
     - metadata
-    - ad_groups
     - bid_strategy
     - brand_id
     - budget_type
@@ -358,9 +359,9 @@ concepts:
     - currency
     - date
     - end_date_time
+    - error
     - impressions
     - is_deleted
-    - pagination
     - spend
     - start_date_time
     - targeting_type
@@ -372,7 +373,7 @@ concepts:
     - active_from
     - active_to
     - ad_campaign_name
-    - ad_group
+    - ad_groups
     - ad_operation_type
     - ad_set_delivery_status
     - ad_tracking_allowance
@@ -380,6 +381,7 @@ concepts:
     - additional_metrics
     - address
     - adgroup_budget
+    - age
     - agency_id
     - agent_name
   ad_group:
@@ -455,16 +457,16 @@ concepts:
       - campaign_id
       - campaignId
     - name: account_id
-      tier: extended
-      providers: 7
-      share: 0.438
+      tier: core
+      providers: 8
+      share: 0.5
       type: string
       spellings:
       - advertiserId
       - account_id
+      - profile_id
       - accountId
       - ad_account_id
-      - profile_id
     - name: status
       tier: extended
       providers: 7
@@ -542,7 +544,7 @@ concepts:
       type: string
       spellings:
       - type
-    long_tail_count: 372
+    long_tail_count: 376
     long_tail_sample:
     - budget
     - metadata
@@ -550,6 +552,7 @@ concepts:
     - bid_strategy
     - budget_type
     - creative_id
+    - error
     - frequency_cap
     - impressions
     - line_item_id
@@ -583,7 +586,6 @@ concepts:
     - adgroup_tav_lower_estimate
     - adgroup_tav_point_estimate
     - adgroup_tav_upper_estimate
-    - adgroups_today_spend
   ad:
     segments_seen:
       ads: 7
@@ -618,9 +620,9 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 6
-      share: 0.857
-      type: integer
+      providers: 7
+      share: 1.0
+      type: string
       spellings:
       - id
       - ad_id
@@ -660,48 +662,48 @@ concepts:
       - effective_status
       - configured_status
       - delivery_status
-    long_tail_count: 40
+    long_tail_count: 72
     long_tail_sample:
+    - ad_type
     - created_at
     - updated_at
     - account_id
+    - ad_creative_id
+    - ad_creative_urls
+    - ad_format
     - ad_status
-    - ad_type
+    - ai_analysis
+    - analysis_metadata
     - bid
     - brands
+    - cached_url
     - campaign_id
     - carousel_creative_info
     - catalog_carousel_creative_info
     - catalog_image_creative_info
     - click_destination_type
+    - competition_reasons
+    - competition_type
+    - competitor_id
+    - confidence_score
     - create_date_time
     - create_user
+    - creative_type
     - cta_label
+    - cta_text
+    - description
     - destination_url
-    - entities
-    - error_message
-    - filters_applied
+    - detected_at
+    - duration_days
+    - end_date
+    - error
+    - field_name
+    - first_shown
     - format
     - from
+    - headline
+    - height
     - image_creative_info
-    - impression_measurement
-    - is_deleted
-    - is_migrated_from_v1
-    - is_price_label_enabled
-    - limit
-    - metadata
-    - moderation_status
-    - op
-    - parent
-    - path
-    - rejection_reasons
-    - submission_status
-    - tracking
-    - type
-    - update_date_time
-    - update_user
-    - url_tracking_parameters
-    - video_creative_info
   creative:
     segments_seen:
       creatives: 9
@@ -752,8 +754,8 @@ concepts:
       - adId
     - name: name
       tier: core
-      providers: 9
-      share: 1.0
+      providers: 7
+      share: 0.778
       type: string
       spellings:
       - name
@@ -781,14 +783,6 @@ concepts:
       - advertiserId
       - account_id
       - ad_account_id
-    - name: brand_id
-      tier: extended
-      providers: 3
-      share: 0.333
-      type: integer
-      spellings:
-      - brandId
-      - brand_id
     - name: updated_at
       tier: extended
       providers: 3
@@ -808,19 +802,21 @@ concepts:
       - thumbnail_url
       - video_url
       - previewUrl
-    long_tail_count: 257
+    long_tail_count: 258
     long_tail_sample:
+    - choice_variable_value
+    - color_variable_value
     - created_at
     - end_date
+    - files_variable_value
+    - hyperlink_variable_value
     - metadata
-    - pagination
-    - retailer_id
     - start_date
     - status
-    - template_id
-    - template_variable_values
+    - text_variable_value
     - vast_tag_url
     - video
+    - video_variable_value
     - a_id
     - a_name
     - account_name
@@ -840,6 +836,7 @@ concepts:
     - banner_image_url
     - blocked
     - body
+    - brand_id
     - brand_name
     - breakout
     - breakout_value
@@ -847,9 +844,6 @@ concepts:
     - c_name
     - call_to_action_type
     - campaign_budget
-    - campaign_end_date
-    - campaign_id
-    - campaign_start_date
   ad_audience:
     segments_seen:
       audiences: 7
@@ -917,7 +911,7 @@ concepts:
       - operation_status
       - status
       - configured_status
-    long_tail_count: 56
+    long_tail_count: 55
     long_tail_sample:
     - audience_id
     - category
@@ -957,8 +951,8 @@ concepts:
     - number_of_members
     - op
     - org_id
-    - pagination
     - path
+    - preferred
   ad_report:
     segments_seen:
       reports: 6
@@ -989,14 +983,6 @@ concepts:
       share: 0.111
       tier: long-tail
     properties:
-    - name: id
-      tier: core
-      providers: 4
-      share: 0.5
-      type: string
-      spellings:
-      - id
-      - ad_id
     - name: campaign_id
       tier: extended
       providers: 3
@@ -1004,6 +990,35 @@ concepts:
       type: string
       spellings:
       - campaign_id
+    - name: clicks
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: integer
+      spellings:
+      - clicks
+      - click
+    - name: cpc
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - cpc
+    - name: cpm
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - cpm
+    - name: ctr
+      tier: extended
+      providers: 3
+      share: 0.375
+      type: string
+      spellings:
+      - ctr
     - name: date
       tier: extended
       providers: 3
@@ -1013,13 +1028,14 @@ concepts:
       - date_start
       - reportDate
       - date
-    - name: metrics
+    - name: id
       tier: extended
       providers: 3
       share: 0.375
       type: string
       spellings:
-      - metrics
+      - id
+      - ad_id
     - name: status
       tier: extended
       providers: 3
@@ -1027,25 +1043,23 @@ concepts:
       type: string
       spellings:
       - status
-    long_tail_count: 135
+    long_tail_count: 222
     long_tail_sample:
     - account_id
-    - clicks
     - conversions
-    - cpc
-    - cpm
     - created_at
-    - ctr
     - currency
     - date_range
     - dimensions
+    - frequency
     - impressions
     - limit
-    - metadata
+    - metrics
     - name
+    - period
+    - reach
     - roas
     - timezone
-    - type
     - updated_at
     - acos
     - ad_account_title
@@ -1059,6 +1073,7 @@ concepts:
     - brand_context_snapshot
     - breakdown_type
     - budget_allocation
+    - budget_spent
     - business_inputs
     - campaign_title
     - catalog_item_id
@@ -1066,6 +1081,7 @@ concepts:
     - click_count
     - competitor_id
     - competitor_name
-    - cpc_cents
-    - cpm_cents
-    - cpm_item
+    - count_add_payment_info
+    - count_add_to_cart
+    - count_add_to_wish_list
+    - count_booking
