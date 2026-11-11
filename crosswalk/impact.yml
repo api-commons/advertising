@@ -1,7 +1,7 @@
 provider: impact
 apis_io: https://apis.io/providers/impact/
 context: advertising
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   ad_account:
     path_segment:

@@ -20,7 +20,7 @@ generated. Every number below is a count of providers.
 | ad_audience | 9 | 9 | name 56% | audiences 7, audience 2, customaudiences 1, custom_audiences 1 |
 | ad_report | 9 | 8 |  | reports 6, report 4, insights 3, performance 1 |
 
-Cohort: 134 providers with harvested OpenAPI, 33 crosswalks. Of the providers exposing a ad_account: 56% create, 80% list, 56% fetch, 24% update, 16% delete. Generated 2026-11-10 by build.py.
+Cohort: 134 providers with harvested OpenAPI, 33 crosswalks. Of the providers exposing a ad_account: 56% create, 80% list, 56% fetch, 24% update, 16% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -29,7 +29,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 ## What the measurement shows
 
 - An ad campaign agrees more than anything else in advertising: name, status, account, budget, start and end dates are all core. The campaign is where ad platforms converged.
-- An ad group agrees on id, name and its campaign -- the hierarchy is shared even where the targeting inside it is not. Meta's ad sets, DV360's line items and Amazon's ad groups are one concept.
+- An ad group agrees on id, name, its campaign and its account -- the hierarchy is shared even where the targeting inside it is not. Facebook's ad sets, DV360's line items and Amazon's ad groups are one concept.
 - Reports agree on nothing: every platform reports impressions, clicks and spend, under its own names and its own breakdowns.
 - Ads themselves are thin as a resource (7 providers); most platforms expose the ad through its creative.
 

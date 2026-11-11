@@ -91,9 +91,9 @@ duplicates:
 findings:
   - "An ad campaign agrees more than anything else in advertising: name, status, account,
     budget, start and end dates are all core. The campaign is where ad platforms converged."
-  - "An ad group agrees on id, name and its campaign -- the hierarchy is shared even where the
-    targeting inside it is not. Meta's ad sets, DV360's line items and Amazon's ad groups are
-    one concept."
+  - "An ad group agrees on id, name, its campaign and its account -- the hierarchy is shared
+    even where the targeting inside it is not. Facebook's ad sets, DV360's line items and
+    Amazon's ad groups are one concept."
   - "Reports agree on nothing: every platform reports impressions, clicks and spend, under
     its own names and its own breakdowns."
   - "Ads themselves are thin as a resource (7 providers); most platforms expose the ad through
